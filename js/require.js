@@ -157,7 +157,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Constructs an error with a pointer to an URL with more information.
+     * Constructs an error with a pointer to an url with more information.
      * @param {String} id the error ID that maps to an ID on a web page.
      * @param {String} message human readable error.
      * @param {Error} [err] the original error, if there is one.
@@ -1468,7 +1468,7 @@ var requirejs, require, define;
                     isBrowser: isBrowser,
 
                     /**
-                     * Converts a module name + .extension into an URL path.
+                     * Converts a module name + .extension into an url path.
                      * *Requires* the use of a module name. It does not support using
                      * plain URLs like nameToUrl.
                      */
@@ -1614,7 +1614,7 @@ var requirejs, require, define;
 
             /**
              * Converts a module name to a file path. Supports cases where
-             * moduleName may actually be just an URL.
+             * moduleName may actually be just an url.
              * Note that it **does not** call normalize on the moduleName,
              * it is assumed to have already been normalized. This is an
              * internal API, not a public one. Use toUrl for the public API.
@@ -1634,8 +1634,8 @@ var requirejs, require, define;
                     return context.nameToUrl(bundleId, ext, skipExt);
                 }
 
-                //If a colon is in the URL, it indicates a protocol is used and it is just
-                //an URL to a file, or if it starts with a slash, contains a query arg (i.e. ?)
+                //If a colon is in the url, it indicates a protocol is used and it is just
+                //an url to a file, or if it starts with a slash, contains a query arg (i.e. ?)
                 //or ends with .js, then assume the user meant to use an url and not a module id.
                 //The slash is important for protocol-less URLs as well as full paths.
                 if (req.jsExtRegExp.test(moduleName)) {
@@ -1886,7 +1886,7 @@ var requirejs, require, define;
      *
      * @param {Object} context the require context to find state.
      * @param {String} moduleName the name of the module.
-     * @param {Object} url the URL to the module.
+     * @param {Object} url the url to the module.
      */
     req.load = function (context, moduleName, url) {
         var config = (context && context.config) || {},

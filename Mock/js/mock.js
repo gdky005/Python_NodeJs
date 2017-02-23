@@ -2275,9 +2275,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	*/
 	module.exports = {
 	    /*
-	        随机生成一个 URL。
+	        随机生成一个 url。
 
-	        [URL 规范](http://www.w3.org/Addressing/URL/url-spec.txt)
+	        [url 规范](http://www.w3.org/Addressing/URL/url-spec.txt)
 	            http                    Hypertext Transfer Protocol 
 	            ftp                     File Transfer protocol 
 	            gopher                  The Gopher protocol 
@@ -2295,7 +2295,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            (host || this.domain()) + // host?
 	            '/' + this.word()
 	    },
-	    // 随机生成一个 URL 协议。
+	    // 随机生成一个 url 协议。
 	    protocol: function() {
 	        return this.pick(
 	            // 协议簇
@@ -8106,7 +8106,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    关键方法的逻辑：
 	    * new   此时尚无法确定是否需要拦截，所以创建原生 XHR 对象是必须的。
-	    * open  此时可以取到 URL，可以决定是否进行拦截。
+	    * open  此时可以取到 url，可以决定是否进行拦截。
 	    * send  此时已经确定了请求方式。
 
 	    规范：
@@ -8259,7 +8259,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// 初始化 Request 相关的属性和方法
 	Util.extend(MockXMLHttpRequest.prototype, {
 	    // https://xhr.spec.whatwg.org/#the-open()-method
-	    // Sets the request method, request URL, and synchronous flag.
+	    // Sets the request method, request url, and synchronous flag.
 	    open: function(method, url, async, username, password) {
 	        var that = this
 
@@ -8500,7 +8500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 
-	// 查找与请求参数匹配的数据模板：URL，Type
+	// 查找与请求参数匹配的数据模板：url，Type
 	function find(options) {
 
 	    for (var sUrlType in MockXMLHttpRequest.Mock._mocked) {
